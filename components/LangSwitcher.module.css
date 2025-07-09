@@ -1,0 +1,24 @@
+.langSwitcher {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.langLink {
+    color: #666;
+    text-decoration: none;
+    padding: 0.4rem ;
+    border-radius: 6px;
+    transition:  0.2s, color 0.2s;
+}
+
+.langLink:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.active {
+    background-color: #000;
+    color: #fff;
+}

@@ -1,0 +1,113 @@
+.header {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.div {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px; 
+  height: auto;
+  margin-right: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  color: aliceblue;
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li {
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.nav ul li a:hover {
+  font-size: 1.1rem;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  
+  padding-right:25px ;
+}
+
+.burger div {
+  width: 30px;
+  height: 5px;
+  background-color: white;
+  margin: 4px 0px;
+  
+  
+  transition: all 0.3s ease;
+}
+
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100%;
+  background-color: #000000;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.mobileMenu a {
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.mobileMenu a:hover {
+  background-color: #222;
+}
+
+.mobileMenu.active {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+}

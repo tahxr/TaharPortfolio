@@ -1,0 +1,51 @@
+{
+    "header": {
+      "title": "My Portfolio",
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "intro": {
+        "hello": "Hello, I'm Tahar",
+        "title": "Passionate full-stack developer based in Montreal",
+        "description": "I design and build modern, robust, and scalable applications.",
+        "cv": "Download my CV"
+      },
+      "apropos": {
+        "title": "About me",
+        "description": "I’m a fresh graduate in computer programming, specialized in full-stack development. Curious, motivated, and eager to learn, I’m looking for exciting projects to challenge myself and grow. I enjoy tackling technical challenges, exploring new technologies, and working on meaningful projects.\n\nMy goal: work with dynamic teams, contribute to performant and innovative apps, and keep growing in a creative and learning environment.",
+        "langages": "Languages",
+        "langagesList": "HTML, CSS, JavaScript, React.js, Node.js and Next.js",
+        "education": "Education",
+        "diplome1": "Diploma in Programming – La Cité College",
+        "diplome2": "Bachelor in Information Systems – Bejaia University",
+        "projects": "Projects",
+        "projectsCount": "Over 5 projects\npersonal & academic"
+      },
+      "projects": {
+        "title": "My projects",
+        "projet1": {
+          "title": "📝 Showcase site for cultural events",
+          "description": "SpectaLive is a website for a performance venue to display various events: concerts, plays, stand-up, dance shows, etc."
+        },
+        "projet2": {
+          "title": "📅 Reservation system",
+          "description": "Next.js project for managing reservations in a restaurant."
+        },
+        "github": "View on GitHub"
+      },"contact": {
+  "title": "Contact Me",
+  "description": "Want to talk about a project, ask a question or just say hello? Fill out the form below.",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "submit": "Send"
+},"footer": {
+  "rights": "All rights reserved."
+}
+
+
+    
+  }
+  

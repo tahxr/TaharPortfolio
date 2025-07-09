@@ -1,0 +1,50 @@
+{
+    "header": {
+      "title": "Mon Portfolio",
+      "home": "Accueil",
+      "about": "À propos",
+      "projects": "Projets",
+      "contact": "Nous joindre"
+    },
+    "intro": {
+    "hello": "Bonjour, je suis Tahar",
+    "title": "Développeur full-stack passionné basé à Montréal",
+    "description": "Je conçois et développe des applications modernes, robustes et évolutives.",
+    "cv": "Télécharger mon CV"
+  },
+  "apropos": {
+    "title": "À propos de moi",
+    "description": "Je suis un tout nouveau diplômé en développement informatique, spécialisé en développement full stack. Curieux, motivé et animé par une soif constante d’apprendre, je suis à la recherche de projets stimulants où je pourrai mettre mes compétences à l’épreuve tout en continuant de grandir. J’aime relever de nouveaux défis techniques, découvrir de nouvelles technologies et travailler sur des projets concrets qui ont un impact.\n\nMon objectif : collaborer avec des équipes dynamiques, contribuer activement au développement d’applications performantes et innovantes, et évoluer en tant que professionnel dans un environnement propice à l’apprentissage et à la créativité.",
+    "langages": "Langages",
+    "langagesList": "HTML, CSS, JavaScript, React.js, Node.js et Next.js",
+    "education": "Éducation",
+    "diplome1": "Diplôme en programmation – Collège La Cité",
+    "diplome2": "Licence en systèmes informatiques – Université de Bejaia",
+    "projects": "Projets",
+    "projectsCount": "Plus de 5 projets réalisés\npersonnels & scolaires"
+  },
+  "projects": {
+    "title": "Mes projets",
+    "projet1": {
+      "title": "📝 Un site vitrine pour des événements culturels",
+      "description": "SpectaLive est un site web destiné à une salle de spectacle pour afficher ses différents événements : concerts, pièces de théâtre, stand-up, spectacles de danse, etc."
+    },
+    "projet2": {
+      "title": "📅 Système de réservation",
+      "description": "Projet réalisé en Next.js pour la gestion de réservations dans un restaurant."
+    },
+    "github": "Voir sur GitHub"
+  },
+  "contact": {
+  "title": "Nous joindre",
+  "description": "Tu veux me parler d’un projet, poser une question ou simplement dire bonjour ? Remplis le formulaire ci-dessous.",
+  "name": "Nom",
+  "email": "Courriel",
+  "message": "Message",
+  "submit": "Envoyer"
+},"footer": {
+  "rights": "Tous droits réservés."
+}
+
+
+  }

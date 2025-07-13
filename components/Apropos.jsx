@@ -15,7 +15,7 @@ export default function Apropos() {
         <div className={styles.photo}>
           <Image
             src={projet1}
-            alt="Photo de profil"
+            alt="Photo"
            height={450}
           />
         </div>

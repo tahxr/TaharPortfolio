@@ -3,14 +3,17 @@
     justify-content: flex-end;
     font-size: 0.9rem;
     font-weight: 500;
+    margin-right: 20px;
 }
 
 .langLink {
     color: #666;
     text-decoration: none;
-    padding: 0.4rem ;
+    padding: 5px;
+    
     border-radius: 6px;
     transition:  0.2s, color 0.2s;
+
 }
 
 .langLink:hover {

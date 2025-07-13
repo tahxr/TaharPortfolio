@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import styles from './LangSwitcher.module.css'; // <-- on importe le CSS
+import styles from './LangSwitcher.module.css'; 
 
 const locales = ['fr', 'en'];
 

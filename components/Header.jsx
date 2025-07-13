@@ -1,12 +1,13 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations,useLocale} from 'next-intl';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from "react";
 import styles from '@/components/Header.module.css';
 import LangSwitcher from './LangSwitcher';
 
 export default function Header() {
+  const locale = useLocale();
   const t = useTranslations('header');
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef();
@@ -45,9 +46,9 @@ export default function Header() {
       <nav className={styles.nav}>
         <ul>
           <li><Link href="/" onClick={closeMenu}>{t('home')}</Link></li>
-          <li><Link href="/#apropos" onClick={closeMenu}>{t('about')}</Link></li>
-          <li><Link href="/#projets" onClick={closeMenu}>{t('projects')}</Link></li>
-          <li><Link href="/contact" onClick={closeMenu}>{t('contact')}</Link></li>
+          <li><Link href={`/${locale}/#apropos`} onClick={closeMenu}>{t('about')}</Link></li>
+          <li><Link href={`/${locale}/#projets`} onClick={closeMenu}>{t('projects')}</Link></li>
+          <li><Link href={`/${locale}/contact`} onClick={closeMenu}>{t('contact')}</Link></li>
           <LangSwitcher/>
         </ul>
       </nav>

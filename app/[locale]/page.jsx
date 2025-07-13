@@ -1,8 +1,8 @@
 'use client';
 
-import Introduction from "@/components/Introduction";
-import Apropos from "@/components/Apropos";
-import Projets from "@/components/Projets";
+import Introduction from "@/components/Introduction.jsx";
+import Apropos from "@/components/Apropos.jsx";
+import Projets from "@/components/Projets.jsx";
 
 export default function Home() {
   return (

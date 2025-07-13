@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import pic from "../public/photo_profil.jpg"
+import pic from "../public/photo.png"
 import downloadIcon from "@/public/download.png";
 import styles from "./Introduction.module.css";
 import { useTranslations, useLocale } from 'next-intl';
@@ -16,7 +16,7 @@ export default function Introduction() {
   return (
     <section className={styles.container}>
      <Image
-        src="/photo_profil.JPG" 
+        src="/photo.png" 
         alt="Photo de profil"
         className={styles.avatar}
         width={160}

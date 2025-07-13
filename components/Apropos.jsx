@@ -1,6 +1,6 @@
 import styles from '@/components/Apropos.module.css'
 import Image from 'next/image'
-import projet1 from '@/public/projet1.jpg'
+import projet1 from '@/public/photo.png'
 import langIcon from '../public/language.png'
 import educIcon from '../public/education.png'
 import proIcon from '../public/project.png'

@@ -1,6 +1,6 @@
 import styles from '@/components/Apropos.module.css'
 import Image from 'next/image'
-
+import projet1 from '@/public/projet1.jpg'
 import langIcon from '../public/language.png'
 import educIcon from '../public/education.png'
 import proIcon from '../public/project.png'
@@ -14,10 +14,9 @@ export default function Apropos() {
 
         <div className={styles.photo}>
           <Image
-            src="/photo_profil.jpg"
+            src={projet1}
             alt="Photo de profil"
-            width={160}
-            height={160}
+           height={450}
           />
         </div>
 

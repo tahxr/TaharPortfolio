@@ -1,4 +1,4 @@
-import styles from './Projets.module.css'
+import styles from './projets.module.css'
 import Image from 'next/image'
 import projet1 from '@/public/projet1.jpg'
 import projet2 from '@/public/projet2.jpg'

@@ -45,7 +45,7 @@ export default function Header() {
 
       <nav className={styles.nav}>
         <ul>
-          <li><Link href="/" onClick={closeMenu}>{t('home')}</Link></li>
+          <li><Link href={`/${locale}/`} onClick={closeMenu}>{t('home')}</Link></li>
           <li><Link href={`/${locale}/#apropos`} onClick={closeMenu}>{t('about')}</Link></li>
           <li><Link href={`/${locale}/#projets`} onClick={closeMenu}>{t('projects')}</Link></li>
           <li><Link href={`/${locale}/contact`} onClick={closeMenu}>{t('contact')}</Link></li>

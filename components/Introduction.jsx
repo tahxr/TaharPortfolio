@@ -15,8 +15,8 @@ export default function Introduction() {
 
   return (
     <section className={styles.container}>
-      <Image
-        src={pic}
+     <Image
+        src="/photo_profil.jpg" // ✅ chemin direct vers /public
         alt="Photo de profil"
         className={styles.avatar}
         width={160}

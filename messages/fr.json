@@ -26,11 +26,11 @@
   "projects": {
     "title": "Mes projets",
     "projet1": {
-      "title": "📝 Un site vitrine pour des événements culturels",
+      "title": "Un site vitrine pour des événements culturels",
       "description": "SpectaLive est un site web destiné à une salle de spectacle pour afficher ses différents événements : concerts, pièces de théâtre, stand-up, spectacles de danse, etc."
     },
     "projet2": {
-      "title": "📅 Système de réservation",
+      "title": "Système de réservation",
       "description": "Projet réalisé en Next.js pour la gestion de réservations dans un restaurant."
     },
     "github": "Voir sur GitHub"

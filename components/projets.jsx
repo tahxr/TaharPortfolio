@@ -1,4 +1,4 @@
-import styles from '@/components/projets.module.css'
+import styles from './Projets.module.css'
 import Image from 'next/image'
 import projet1 from '@/public/projet1.jpg'
 import projet2 from '@/public/projet2.jpg'
@@ -21,7 +21,7 @@ export default function Projets() {
                     </div>
                     <h3 className={styles.projectTitle}>{t('projet1.title')} </h3>
                     <p>{t('projet1.description')}</p>
-                    <a href="https://github.com/tonprofil/todo-app" target="_blank" className={styles.link}>{t('github')}</a>
+                    <a href="https://github.com/tahxr/SpectaCit-" target="_blank" className={styles.link}>{t('github')}</a>
                 </div>
 
                 <div className={styles.projectCard}>
@@ -32,9 +32,9 @@ export default function Projets() {
                             fill
                         />
                     </div>
-                    <h3 className={styles.projectTitle}>📅 {t('projet2.title')}</h3>
+                    <h3 className={styles.projectTitle}>{t('projet2.title')}</h3>
                     <p>{t('projet2.description')}</p>
-                    <a href="https://github.com/tonprofil/reservation-system" target="_blank" className={styles.link}>{t('github')}</a>
+                    <a href="https://github.com/tahxr/livrable2" target="_blank" className={styles.link}>{t('github')}</a>
                 </div>
             </div>
         </section>

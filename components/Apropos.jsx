@@ -1,6 +1,6 @@
 import styles from '@/components/Apropos.module.css'
 import Image from 'next/image'
-import pic from '@/public/photo_profil.jpg'
+import pic from '../public/photo_profil.jpg'
 import { useTranslations } from 'next-intl';
 export default function Apropos() {
   const t = useTranslations('apropos');
@@ -8,12 +8,12 @@ export default function Apropos() {
     <section id="apropos" className={styles.about}>
       <h2 className={styles.title}>{t('title')}</h2>
       <div className={styles.main}>
-        {/* Partie gauche : image */}
+       
         <div className={styles.photo}>
           <Image src={pic} alt="Photo de profil" layout="responsive" />
         </div>
 
-        {/* Partie droite : texte et cartes */}
+        
         <div className={styles.content}>
           <p className={styles.description}>
           {t('description')}

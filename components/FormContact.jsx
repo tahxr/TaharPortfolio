@@ -68,7 +68,7 @@ export default function FormContact() {
 
     return (
         <>
-            <h2>{t('title')}</h2>
+            <h2 className={styles.h2}>{t('title')}</h2>
             <p className={styles.description}>{t('description')}</p>
 
             <form ref={formRef} action={formAction} className={styles.form} noValidate>

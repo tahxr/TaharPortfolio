@@ -40,6 +40,8 @@
   "name": "Name",
   "email": "Email",
   "message": "Message",
+  "success":"Message sent successfully",
+  "error":"Sending failed",
   "submit": "Send"
 },"footer": {
   "rights": "All rights reserved."

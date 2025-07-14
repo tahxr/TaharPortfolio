@@ -41,7 +41,10 @@
   "name": "Nom",
   "email": "Courriel",
   "message": "Message",
-  "submit": "Envoyer"
+  "submit": "Envoyer",
+  "success":"Message envoyer avec succes",
+  "error":"Echec de l'envoi "
+
 },"footer": {
   "rights": "Tous droits réservés."
 }

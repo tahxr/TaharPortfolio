@@ -1,16 +1,22 @@
 'use client';
 
-import { useTranslations,useLocale} from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from 'react';
+import { useTheme } from 'next-themes';
 import styles from '@/components/Header.module.css';
 import LangSwitcher from './LangSwitcher';
 
 export default function Header() {
   const locale = useLocale();
   const t = useTranslations('header');
+  const { theme, setTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef();
+
+  useEffect(() => setMounted(true), []);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
   const closeMenu = () => setMenuOpen(false);
@@ -49,7 +55,19 @@ export default function Header() {
           <li><Link href={`/${locale}/#apropos`} onClick={closeMenu}>{t('about')}</Link></li>
           <li><Link href={`/${locale}/#projets`} onClick={closeMenu}>{t('projects')}</Link></li>
           <li><Link href={`/${locale}/contact`} onClick={closeMenu}>{t('contact')}</Link></li>
-          <LangSwitcher/>
+
+          <LangSwitcher />
+
+          {/* 🌙☀️ Dark Mode */}
+          {mounted && (
+            <button
+              className={styles.themeToggle}
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+          )}
         </ul>
       </nav>
 
@@ -57,11 +75,27 @@ export default function Header() {
         <div></div><div></div><div></div>
       </div>
 
-      <div ref={menuRef} className={`${styles.mobileMenu} ${menuOpen ? styles.active : ''}`}>
-        <Link href="/" onClick={closeMenu}>{t('home')}</Link>
-        <Link href="/#apropos" onClick={closeMenu}>{t('about')}</Link>
-        <Link href="/#projets" onClick={closeMenu}>{t('projects')}</Link>
-        <Link href="/contact" onClick={closeMenu}>{t('contact')}</Link>
+      <div
+        ref={menuRef}
+        className={`${styles.mobileMenu} ${menuOpen ? styles.active : ''}`}
+      >
+        <Link href={`/${locale}/`} onClick={closeMenu}>{t('home')}</Link>
+        <Link href={`/${locale}/#apropos`} onClick={closeMenu}>{t('about')}</Link>
+        <Link href={`/${locale}/#projets`} onClick={closeMenu}>{t('projects')}</Link>
+        <Link href={`/${locale}/contact`} onClick={closeMenu}>{t('contact')}</Link>
+
+        {/* 🌙☀️ aussi dans le menu mobile */}
+        {mounted && (
+          <button
+            className={styles.themeToggle}
+            onClick={() => {
+              setTheme(theme === 'dark' ? 'light' : 'dark');
+              closeMenu();
+            }}
+          >
+            {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
+          </button>
+        )}
       </div>
     </header>
   );

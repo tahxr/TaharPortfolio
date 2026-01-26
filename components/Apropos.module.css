@@ -72,6 +72,35 @@
     color: #333;
 }
 
+
+
+/* 🌙 DARK MODE CARD */
+:global(.dark) .card {
+  background: #31343f;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.8);
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-6px);
+}
+
+:global(.dark) .card:hover {
+  box-shadow: 0 16px 40px rgba(30, 41, 59, 0.9);
+}
+
+/* ---------- TITRE CARD ---------- */
+.cardTitle {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+:global(.dark) .cardTitle {
+  color: #e5e7eb;
+}
 /* Responsive : tout en colonne sur petit écran */
 @media (max-width: 768px) {
     .main {

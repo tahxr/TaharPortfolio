@@ -3,6 +3,7 @@
 import Introduction from "@/components/Introduction.jsx";
 import Apropos from "@/components/Apropos.jsx";
 import Projets from "@/components/projets";
+import FormContact from "@/components/FormContact";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Introduction />
       <Apropos />
       <Projets />
+      <FormContact />
     </>
   );
 }

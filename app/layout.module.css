@@ -1,19 +1,2 @@
-.body{
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-    background-color: white;
-    color: black;
-
-}
-.main{
-    flex: 1;
-    padding-top: 50px;
-}
-
-:global(.dark) .body {
-  background-color: #0f172a;
-  color: #ffffff;
-}
+.body { min-height: 100vh; background: #0d0d0d; }
+.main { padding-top: 0; }

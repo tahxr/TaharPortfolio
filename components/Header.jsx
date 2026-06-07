@@ -1,101 +1,67 @@
 'use client';
-
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-import { useTheme } from 'next-themes';
-import styles from '@/components/Header.module.css';
 import LangSwitcher from './LangSwitcher';
 
 export default function Header() {
   const locale = useLocale();
   const t = useTranslations('header');
-  const { theme, setTheme } = useTheme();
-
-  const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef();
 
-  useEffect(() => setMounted(true), []);
-
-  const toggleMenu = () => setMenuOpen(prev => !prev);
-  const closeMenu = () => setMenuOpen(false);
-
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) closeMenu();
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => closeMenu();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) closeMenu();
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) setMenuOpen(false);
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const links = [
+    { href: `/${locale}/`, label: t('home') },
+    { href: `/${locale}/#apropos`, label: t('about') },
+    { href: `/${locale}/#projets`, label: t('projects') },
+    { href: `/${locale}/#contact`, label: t('contact') },
+  ];
+
   return (
-    <header className={styles.header}>
-      <div className={styles.div}>
-        <h1>{t('title')}</h1>
-      </div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0d0d0d]/80 backdrop-blur-sm border-b border-white/10">
+      <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
 
-      <nav className={styles.nav}>
-        <ul>
-          <li><Link href={`/${locale}/`} onClick={closeMenu}>{t('home')}</Link></li>
-          <li><Link href={`/${locale}/#apropos`} onClick={closeMenu}>{t('about')}</Link></li>
-          <li><Link href={`/${locale}/#projets`} onClick={closeMenu}>{t('projects')}</Link></li>
-          <li><Link href={`/${locale}/contact`} onClick={closeMenu}>{t('contact')}</Link></li>
+        <Link href={`/${locale}/`} className="text-[13px] font-bold tracking-wider text-[#f0ede8] uppercase">
+          Portfolio
+        </Link>
 
+        {/* Nav desktop */}
+        <nav className="hidden md:flex items-center gap-8">
+          {links.map(({ href, label }) => (
+            <Link key={href} href={href}
+              className="text-[11px] tracking-widest uppercase text-[#555] hover:text-[#f0ede8] transition-colors duration-200">
+              {label}
+            </Link>
+          ))}
           <LangSwitcher />
+        </nav>
 
-          {/* 🌙☀️ Dark Mode */}
-          {mounted && (
-            <button
-              className={styles.themeToggle}
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? '☀️' : '🌙'}
-            </button>
-          )}
-        </ul>
-      </nav>
-
-      <div className={styles.burger} onClick={toggleMenu}>
-        <div></div><div></div><div></div>
+        {/* Burger mobile */}
+        <button className="md:hidden flex flex-col gap-1.5" onClick={() => setMenuOpen(p => !p)}>
+          <span className={`block w-5 h-px bg-[#f0ede8] transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-5 h-px bg-[#f0ede8] transition-all ${menuOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-5 h-px bg-[#f0ede8] transition-all ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+        </button>
       </div>
 
-      <div
-        ref={menuRef}
-        className={`${styles.mobileMenu} ${menuOpen ? styles.active : ''}`}
-      >
-        <Link href={`/${locale}/`} onClick={closeMenu}>{t('home')}</Link>
-        <Link href={`/${locale}/#apropos`} onClick={closeMenu}>{t('about')}</Link>
-        <Link href={`/${locale}/#projets`} onClick={closeMenu}>{t('projects')}</Link>
-        <Link href={`/${locale}/contact`} onClick={closeMenu}>{t('contact')}</Link>
-
-        {/* 🌙☀️ aussi dans le menu mobile */}
-        {mounted && (
-          <button
-            className={styles.themeToggle}
-            onClick={() => {
-              setTheme(theme === 'dark' ? 'light' : 'dark');
-              closeMenu();
-            }}
-          >
-            {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
-          </button>
-        )}
+      {/* Mobile menu */}
+      <div ref={menuRef} className={`md:hidden bg-[#0d0d0d] border-t border-[#1e1e1e] overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-64 py-4' : 'max-h-0'}`}>
+        <nav className="flex flex-col px-6 gap-5">
+          {links.map(({ href, label }) => (
+            <Link key={href} href={href} onClick={() => setMenuOpen(false)}
+              className="text-[11px] tracking-widest uppercase text-[#555] hover:text-[#f0ede8] transition-colors">
+              {label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );

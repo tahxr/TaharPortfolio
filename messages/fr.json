@@ -6,11 +6,18 @@
       "projects": "Projets",
       "contact": "Nous joindre"
     },
-    "intro": {
-    "hello": "Bonjour, je suis Tahar",
-    "title": "Développeur full-stack junior passionné ",
-    "description": "Je conçois et développe des applications modernes, robustes et évolutives.",
-    "cv": "Télécharger mon CV"
+"intro": {
+  "role": "Développeur Web.",
+  "hello": "Bonjour, je suis Tahar",
+  "title": "Développeur full-stack junior passionné",
+  "description": "Je conçois et développe des applications modernes, robustes et évolutives.",
+  "cv": "Télécharger mon CV",
+  "seeProjects": "Voir mes projets",
+  "available": "Disponible",
+  "lookingFor": "Je cherche à rejoindre une",
+  "crossFunctional": "équipe pluridisciplinaire",
+  "lookingForSub": "qui valorise l'amélioration de la vie des gens grâce au design accessible"
+
   },
   "apropos": {
     "title": "À propos de moi",
@@ -35,16 +42,19 @@
     },
     "github": "Voir sur GitHub"
   },
-  "contact": {
+"contact": {
   "title": "Nous joindre",
-  "description": "Tu veux me parler d’un projet, poser une question ou simplement dire bonjour ? Remplis le formulaire ci-dessous.",
+  "together": "Travaillons\nensemble.",
+  "description": "Tu veux me parler d'un projet, poser une question ou simplement dire bonjour ? Remplis le formulaire ci-dessous.",
   "name": "Nom",
+  "namePlaceholder": "Votre nom",
   "email": "Courriel",
+  "emailPlaceholder": "votre@courriel.com",
   "message": "Message",
+  "messagePlaceholder": "Votre message...",
   "submit": "Envoyer",
-  "success":"Message envoyer avec succes",
-  "error":"Echec de l'envoi "
-
+  "success": "Message envoyé avec succès",
+  "error": "Échec de l'envoi"
 },"footer": {
   "rights": "Tous droits réservés."
 }
